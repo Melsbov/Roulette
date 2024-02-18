@@ -4,6 +4,7 @@ const wheel = [
     "b22", "r23", "b24", "r25", "b26", "r27", "b28", "b29", "r30", "b31", "r32",
     "b33", "r34", "b35", "r36"];
 
+    var Title = document.getElementById("title")
     var button = document.getElementById("spinButton");
     var balanceElement = document.getElementById("balance");
     var betElement = document.getElementById("currentBet");
@@ -11,7 +12,7 @@ const wheel = [
     var spinCounterElement = document.getElementById("spinCounter"); // Element to display spin counter
     var lastResultStartedWithR = false;
 
-    var betAmount = 100
+    var betAmount = 5000
     
     // Extracting the initial balance from the text content
     var balanceText = balanceElement.textContent;
@@ -65,6 +66,7 @@ const wheel = [
         if (balance <= 0) {
             console.log("Balance is zero or negative. Disabling spin button.");
             button.disabled = true; // Disable the spin button
+            title.textContent += " You've gone bust!";
         } else {
             // Update chart data
             chartData.labels.push("Spin " + spinCounter);
