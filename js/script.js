@@ -11,7 +11,7 @@ const wheel = [
     var spinCounterElement = document.getElementById("spinCounter"); // Element to display spin counter
     var lastResultStartedWithR = false;
 
-    var betAmount = 1
+    var betAmount = 100
     
     // Extracting the initial balance from the text content
     var balanceText = balanceElement.textContent;
